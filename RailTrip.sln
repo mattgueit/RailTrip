@@ -3,9 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailTrip.Domain", "src\RailTrip.Domain\RailTrip.Domain.csproj", "{930FB785-C1AA-42EB-893E-B7AE6083815F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailTrip.Application", "src\RailTrip.Application\RailTrip.Application.csproj", "{81A198C5-8362-40F7-83EA-40096CF34095}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailTrip.Infrastructure", "src\RailTrip.Infrastructure\RailTrip.Infrastructure.csproj", "{AE3DC0C5-6136-4175-9737-E8EC25D4713F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RailTrip.Presentation", "src\RailTrip.Presentation\RailTrip.Presentation.csproj", "{89E889B0-54C8-435C-B2C8-D8CE3E13489F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailTrip.WebApi", "src\RailTrip.WebApi\RailTrip.WebApi.csproj", "{E440125D-5815-44F0-8DE6-13983D9A05D9}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{930FB785-C1AA-42EB-893E-B7AE6083815F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930FB785-C1AA-42EB-893E-B7AE6083815F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930FB785-C1AA-42EB-893E-B7AE6083815F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930FB785-C1AA-42EB-893E-B7AE6083815F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A198C5-8362-40F7-83EA-40096CF34095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A198C5-8362-40F7-83EA-40096CF34095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A198C5-8362-40F7-83EA-40096CF34095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A198C5-8362-40F7-83EA-40096CF34095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3DC0C5-6136-4175-9737-E8EC25D4713F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3DC0C5-6136-4175-9737-E8EC25D4713F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3DC0C5-6136-4175-9737-E8EC25D4713F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3DC0C5-6136-4175-9737-E8EC25D4713F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E889B0-54C8-435C-B2C8-D8CE3E13489F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E889B0-54C8-435C-B2C8-D8CE3E13489F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E889B0-54C8-435C-B2C8-D8CE3E13489F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E889B0-54C8-435C-B2C8-D8CE3E13489F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E440125D-5815-44F0-8DE6-13983D9A05D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E440125D-5815-44F0-8DE6-13983D9A05D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E440125D-5815-44F0-8DE6-13983D9A05D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E440125D-5815-44F0-8DE6-13983D9A05D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{930FB785-C1AA-42EB-893E-B7AE6083815F} = {82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}
+		{81A198C5-8362-40F7-83EA-40096CF34095} = {82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}
+		{AE3DC0C5-6136-4175-9737-E8EC25D4713F} = {82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}
+		{89E889B0-54C8-435C-B2C8-D8CE3E13489F} = {82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}
+		{E440125D-5815-44F0-8DE6-13983D9A05D9} = {82B9ADC4-3D48-4210-87E9-C937BCEEF4B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE478BCB-C07D-4D42-91ED-B02D24E8D6D2}
