@@ -16,7 +16,7 @@ namespace RailTrip.Application.RailOperators.Queries.GetRailOperatorById
 
         public async Task<RailOperatorResponse> Handle(GetRailOperatorByIdQuery request, CancellationToken cancellationToken)
         {
-            const string sql = @"SELECT Id, Name, ContactNumber, OperatingRegion FROM ""RailOperators"" WHERE ""Id"" == @RailOperatorId";
+            const string sql = @"SELECT ""Id"", ""Name"", ""ContactNumber"", ""OperatingRegion"" FROM ""RailOperators"" WHERE ""Id"" = @RailOperatorId";
 
             var railOperator = await _dbConnection.QueryFirstOrDefaultAsync<RailOperatorResponse>(sql, new { request.RailOperatorId });
 
