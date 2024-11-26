@@ -15,6 +15,14 @@ namespace RailTrip.Application.Behaviours
             _validators = validators;
         }
 
+        /// <summary>
+        /// Responsible for running validation (via configured validators inheriting AbstractValidator), detecting validation errors and throwing an exception if there are any.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="next"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        /// <exception cref="ValidationException"></exception>
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             if (!_validators.Any())

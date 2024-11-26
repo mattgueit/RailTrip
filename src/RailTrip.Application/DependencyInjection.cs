@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using RailTrip.Application.Behaviours;
 
 namespace RailTrip.Application
 {
@@ -14,6 +16,8 @@ namespace RailTrip.Application
             );
 
             services.AddValidatorsFromAssembly(assembly);
+
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
             return services;
         }
