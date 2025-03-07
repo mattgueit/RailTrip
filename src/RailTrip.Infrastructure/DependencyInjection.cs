@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RailTrip.Domain.Abstractions;
@@ -18,11 +19,19 @@ namespace RailTrip.Infrastructure
 
             services.AddScoped<IDbConnection>(factory => factory.GetRequiredService<ApplicationDbContext>().Database.GetDbConnection());
 
-
             // services
             services.AddScoped<IRailOperatorRepository, RailOperatorRepository>();
 
             return services;
+        }
+
+        public static void ApplyMigrations(this IApplicationBuilder app)
+        {
+            using IServiceScope scope = app.ApplicationServices.CreateScope();
+
+            using ApplicationDbContext dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+            dbContext.Database.Migrate();
         }
     }
 }

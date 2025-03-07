@@ -1,0 +1,21 @@
+services:
+  railtrip.webapi:
+    image: ${DOCKER_REGISTRY-}railtripwebapi
+    container_name: railtrip.webapi
+    build:
+      context: .
+      dockerfile: src/RailTrip.WebApi/Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+  railtrip.database:
+    image: postgres:latest
+    container_name: railtrip.database
+    environment:
+      - POSTGRES_DB=RailTrip
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/railtrip-db:/var/lib/postgresql/data
+    ports:
+      - 5434:5434

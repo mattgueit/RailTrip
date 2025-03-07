@@ -42,6 +42,7 @@ namespace RailTrip.WebApi
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.ApplyMigrations();
             }
 
             app.UseMiddleware<ExceptionHandlingMiddleware>();
